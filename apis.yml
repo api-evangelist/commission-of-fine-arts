@@ -1,0 +1,31 @@
+aid: commission-of-fine-arts
+name: Commission of Fine Arts
+description: >-
+  U.S. Commission of Fine Arts 401 F Street NW, Suite 312 Washington, DC
+  20001-2728 (202) 504-2200. Link to RSS feed; Link to Twitter page
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - API
+created: '2024-12-03'
+modified: '2024-12-03'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/commission-of-fine-arts/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: commission-of-fine-arts:commission-of-fine-arts
+    name: Commission of Fine Arts
+    description: >-
+      U.S. Commission of Fine Arts 401 F Street NW, Suite 312 Washington, DC
+      20001-2728 (202) 504-2200. Link to RSS feed; Link to Twitter page
+    humanURL: https://www.cfa.gov
+    tags:
+      - API
+    properties:
+      - type: Documentation
+        url: https://www.cfa.gov
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
