@@ -3,8 +3,8 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/commission-of-fine-arts/refs/heads/main/apis.yml
 name: Commission of Fine Arts
 tags:
-  - Federal Government
   - Arts
+  - Federal Government
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
@@ -20,8 +20,8 @@ apis:
   - aid: commission-of-fine-arts:commission-of-fine-arts
     name: Commission of Fine Arts API
     tags:
-      - Federal Government
       - Arts
+      - Federal Government
     humanURL: https://www.cfa.gov
     properties:
       - url: https://www.cfa.gov
