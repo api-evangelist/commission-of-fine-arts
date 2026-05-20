@@ -28,6 +28,8 @@ description: >-
   cfa.gov.
 apis: []
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/u-s-commission-of-fine-arts
   - type: Website
     url: https://www.cfa.gov
   - type: ProjectSearch
