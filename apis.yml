@@ -28,6 +28,8 @@ description: >-
   cfa.gov.
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/commission-of-fine-arts-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/u-s-commission-of-fine-arts
   - type: Website
