@@ -1,0 +1,22 @@
+generated: '2026-09-05'
+method: searched
+source: https://www.cfa.gov/robots.txt
+limit_count: 0
+note: >-
+  No API exists, so no API rate limits are published and none can be observed.
+  The only machine-consumer constraint the agency publishes is a robots.txt,
+  which sets no Crawl-delay and disallows only Drupal administrative paths
+  (/core/, /profiles/, /admin/, /user/login/, /search/ and their /index.php
+  equivalents). The public Project Search view, the sitemap and the three RSS
+  feeds are all crawlable. No RateLimit-*, X-RateLimit-* or Retry-After header
+  was observed on any response from www.cfa.gov.
+rate_limits: []
+response_headers_observed: []
+crawl_policy:
+  robots_txt: https://www.cfa.gov/robots.txt
+  status: 200
+  crawl_delay: null
+  disallows_public_content: false
+evidence:
+  - {url: 'https://www.cfa.gov/robots.txt', status: 200}
+  - {url: 'https://www.cfa.gov/records-research/project-search', status: 200}

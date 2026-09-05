@@ -1,0 +1,90 @@
+generated: '2026-09-05'
+method: probed
+source: live HTTP probe of the CFA web hosts
+note: >-
+  Every named discovery path on every host the record knows returned 404. No
+  /.well-known/ surface is served by the Commission of Fine Arts, so NO
+  WellKnown or SecurityTxt pointer is emitted in apis.yml — this file records a
+  measured absence, not a presence. The negative-control path also 404'd, so the
+  host is not a path-echoing catch-all and the 404s are trustworthy. The site is
+  a Drupal 10 install (Simple XML Sitemap module) with no REST/JSON:API surface
+  enabled.
+hit_count: 0
+path_echo_control: passed
+hosts:
+  - host: https://www.cfa.gov
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/aauth-resource.json
+        status: 404
+      - path: /.well-known/ucp.json
+        status: 404
+      - path: /.well-known/acp.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /.well-known/apis.json
+        status: 404
+      - path: /apis.json
+        status: 404
+      - path: /apis.yml
+        status: 403
+      - path: /.well-known/commission-of-fine-arts-negative-control-7f3ab91c.json
+        status: 404
+  - host: https://cfa.gov
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+contract_discovery:
+  note: >-
+    STEP 0b run in full against the only host this agency operates. Nothing
+    parses as a machine-readable contract.
+  probes:
+    - {url: 'https://www.cfa.gov/openapi.json', status: 404}
+    - {url: 'https://www.cfa.gov/openapi.yaml', status: 404}
+    - {url: 'https://www.cfa.gov/swagger.json', status: 404}
+    - {url: 'https://www.cfa.gov/api-docs', status: 404}
+    - {url: 'https://www.cfa.gov/api', status: 404}
+    - {url: 'https://www.cfa.gov/api/v1', status: 404}
+    - {url: 'https://www.cfa.gov/developer', status: 404}
+    - {url: 'https://www.cfa.gov/data', status: 404}
+    - {url: 'https://www.cfa.gov/data.json', status: 404}
+    - {url: 'https://www.cfa.gov/jsonapi', status: 404}
+    - {url: 'https://www.cfa.gov/jsonapi/index', status: 404}
+    - {url: 'https://www.cfa.gov/llms.txt', status: 404}
+  dns:
+    note: no API/data subdomain resolves
+    checked: [api.cfa.gov, data.cfa.gov, developer.cfa.gov, records.cfa.gov, apps.cfa.gov]
+    resolved: []
+  ogc: not-probed — no evidence (no baseURL, no docs link, no WMS/WFS/OGC prose) points at an OGC surface
+machine_readable_surface_found:
+  - path: /robots.txt
+    status: 200
+    kind: robots.txt
+  - path: /sitemap.xml
+    status: 200
+    kind: XML sitemap (Drupal Simple XML Sitemap; ~12,000 URLs across 6 pages)
+  - path: /rss/blog.xml
+    status: 200
+    kind: RSS 2.0
+  - path: /rss/news.xml
+    status: 200
+    kind: RSS 2.0
+  - path: /rss/meetings.xml
+    status: 200
+    kind: RSS 2.0

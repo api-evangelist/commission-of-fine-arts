@@ -1,0 +1,22 @@
+generated: '2026-09-05'
+method: searched
+source: https://www.cfa.gov/records-research/research-policy-costs
+plan_count: 0
+note: >-
+  The Commission of Fine Arts operates no developer program, no API and no API
+  plans, so there is nothing to price. The agency does publish a fee schedule,
+  but it is for records reproduction and research services under its
+  records-and-research policy, not for programmatic access — it is recorded here
+  as the only published cost surface so a reader is not left wondering whether
+  pricing was checked. Project Search and the CFA record pages are free to use
+  and require no account.
+plans: []
+adjacent_published_costs:
+  - name: Research and records reproduction fees
+    url: https://www.cfa.gov/records-research/research-policy-costs
+    applies_to: reproduction of CFA records and staff research time
+    api_related: false
+evidence:
+  - {url: 'https://www.cfa.gov/records-research/research-policy-costs', status: 200}
+  - {url: 'https://www.cfa.gov/records-research/project-search', status: 200}
+  - {url: 'https://www.cfa.gov/developer', status: 404}

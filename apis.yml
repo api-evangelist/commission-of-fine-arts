@@ -41,7 +41,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/commission
 access: 3rd-Party
 kind: government
 created: '2024-12-03'
-modified: '2026-04-26'
+modified: '2026-09-05'
 position: Consuming
 description: >-
   The U.S. Commission of Fine Arts (CFA) is an independent federal agency
@@ -49,15 +49,29 @@ description: >-
   aesthetics of construction within Washington, D.C., and over coins,
   medals, and Federal commemorative works. The CFA also appoints the Old
   Georgetown Board which conducts design review for projects in the
-  Georgetown Historic District. As of April 2026 the CFA does not publish
-  a public developer API, OpenAPI specifications, or a developer program.
-  Project records are accessible through the CFA's web-based Project
-  Search tool and via the records-and-research process documented at
-  cfa.gov.
+  Georgetown Historic District. As of September 2026 the CFA publishes no
+  public developer API, no OpenAPI specification and no developer program. Its
+  roughly 19,500 project records are reachable only through a server-rendered
+  Drupal Search API view at cfa.gov/records-research/project-search and through
+  the records-and-research request process. The only machine-readable surfaces
+  the agency serves are a sitemap.xml, a robots.txt and three RSS 2.0 feeds
+  (blog, news, meetings). The CFA does publish a CISA-aligned Vulnerability
+  Disclosure Policy with a security@cfa.gov contact and stated 3/7/90-day
+  response targets.
 apis: []
 common:
   - type: DomainSecurity
     url: security/commission-of-fine-arts-domain-security.yml
+  - type: VulnerabilityDisclosure
+    url: security/commission-of-fine-arts-vulnerability-disclosure.yml
+  - type: Security
+    url: https://www.cfa.gov/vulnerability-disclosure-policy
+  - type: LLMsTxt
+    url: llms/commission-of-fine-arts-llms.txt
+  - type: Plans
+    url: plans/commission-of-fine-arts-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/commission-of-fine-arts-rate-limits.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/u-s-commission-of-fine-arts
   - type: Website
@@ -67,16 +81,45 @@ common:
   - type: RecordsResearch
     url: https://www.cfa.gov/records-research
   - type: MeetingsAndAgendas
-    url: https://www.cfa.gov/meetings-agendas
+    url: https://www.cfa.gov/upcoming-meetings
   - type: OldGeorgetownBoard
-    url: https://www.cfa.gov/about-cfa/old-georgetown-board
+    url: https://www.cfa.gov/project-review/old-georgetown
   - type: AccessingRecords
-    url: https://www.cfa.gov/records-research/accessing-cfa-records
+    url: https://www.cfa.gov/records-research/accessing-our-records
   - type: ContactUs
-    url: https://www.cfa.gov/about-cfa/contact-us
+    url: https://www.cfa.gov/contact-us
   - type: PrivacyPolicy
-    url: https://www.cfa.gov/privacy-policy
+    url: https://www.cfa.gov/website-policies
+  - type: Blog
+    url: https://www.cfa.gov/about-cfa/blog
+  - type: BlogRSS
+    url: https://www.cfa.gov/rss/blog.xml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 specificationVersion: '0.23'
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    The CFA runs one Drupal 10 site whose ~19,500 project records are served only
+    as HTML through a Search API view — /jsonapi, /api, /openapi.json, /data.json
+    and /llms.txt all 404, no api./data./developer. subdomain resolves in DNS, and
+    the agency has no developer portal, SDK or webhook surface of any kind.
+  evidence:
+    - url: https://www.cfa.gov/jsonapi
+      status: 404
+    - url: https://www.cfa.gov/openapi.json
+      status: 404
+    - url: https://www.cfa.gov/developer
+      status: 404
+    - url: https://www.cfa.gov/.well-known/api-catalog
+      status: 404
+    - url: https://www.cfa.gov/records-research/project-search
+      status: 200
+  checked: '2026-09-05'
