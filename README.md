@@ -1,4 +1,4 @@
-# Commission of Fine Arts (commission-of-fine-arts)
+# Commission of Fine Arts
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,47 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-The U.S. Commission of Fine Arts (CFA) is an independent federal agency established in 1910 that has review authority over the design and aesthetics of construction within Washington, D.C., and over coins, medals, and Federal commemorative works. The CFA also appoints the Old Georgetown Board which conducts design review for projects in the Georgetown Historic District. As of April 2026 the CFA does not publish a public developer API, OpenAPI specifications, or a developer program. Project records are accessible through the CFA's web-based Project Search tool and via the records-and-research process documented at cfa.gov.
+The U.S. Commission of Fine Arts (CFA) is an independent federal agency established in 1910 that has review authority over the design and aesthetics of construction within Washington, D.C., and over coins, medals, and Federal commemorative works. The CFA also appoints the Old Georgetown Board which conducts design review for projects in the Georgetown Historic District. As of September 2026 the CFA publishes no public developer API, no OpenAPI specification and no developer program. Its roughly 19,500 project records are reachable only through a server-rendered Drupal Search API view at cfa.gov/records-research/project-search and through the records-and-research request process. The only machine-readable surfaces the agency serves are a sitemap.xml, a robots.txt and three RSS 2.0 feeds (blog, news, meetings). The CFA does publish a CISA-aligned Vulnerability Disclosure Policy with a security@cfa.gov contact and stated 3/7/90-day response targets.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/commission-of-fine-arts/refs/heads/main/apis.yml)
+**Areas:** Architecture · Arts · Design Review · Federal Government · Washington DC
 
-## Scope
+## Commission of Fine Arts on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
-- **x-type:** government
+Everything profiled for Commission of Fine Arts is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/commission-of-fine-arts/](https://apis.io/providers/commission-of-fine-arts/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### Published properties
 
-- Architecture
-- Arts
-- Design Review
-- Federal Government
-- Washington DC
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (2)
 
-- **Created:** 2024-12-03
-- **Modified:** 2026-04-26
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [Commission Of Fine Arts Domain Security](https://apis.io/security/commission-of-fine-arts/commission-of-fine-arts-domain-security/)
+- [Commission Of Fine Arts Vulnerability Disclosure](https://apis.io/security/commission-of-fine-arts/commission-of-fine-arts-vulnerability-disclosure/)
 
-No public developer API has been documented for the U.S. Commission of Fine Arts at this time. The agency provides web-based access to project records and meeting agendas, but no machine-readable endpoints or OpenAPI specification have been published.
+#### Plans and pricing (1)
 
-## Common Properties
+Published plans, tiers and prices.
+
+- [Commission Of Fine Arts Plans Pricing](https://apis.io/plans/commission-of-fine-arts/commission-of-fine-arts-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Commission Of Fine Arts Rate Limits](https://apis.io/rate-limits/commission-of-fine-arts/commission-of-fine-arts-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.cfa.gov)
-- [Project Search](https://www.cfa.gov/records-research/project-search)
-- [Records & Research](https://www.cfa.gov/records-research)
-- [Meetings & Agendas](https://www.cfa.gov/meetings-agendas)
-- [Old Georgetown Board](https://www.cfa.gov/about-cfa/old-georgetown-board)
-- [Accessing CFA Records](https://www.cfa.gov/records-research/accessing-cfa-records)
-- [Contact Us](https://www.cfa.gov/about-cfa/contact-us)
-- [Privacy Policy](https://www.cfa.gov/privacy-policy)
+- [Blog](https://www.cfa.gov/about-cfa/blog)
+- [Security](https://www.cfa.gov/vulnerability-disclosure-policy)
+- [Privacy policy](https://www.cfa.gov/website-policies)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 9.1** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 10.5 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.7** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/commission-of-fine-arts/](https://apis.io/providers/commission-of-fine-arts/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Commission of Fine Arts: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/commission-of-fine-arts/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
